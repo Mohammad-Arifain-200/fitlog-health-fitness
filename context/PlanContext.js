@@ -39,7 +39,7 @@ export function PlanProvider({ children }) {
   function addToPlan(workoutOrId) {
     const id = Number(typeof workoutOrId === 'object' ? workoutOrId.id : workoutOrId);
     if (plan.some((item) => Number(item.id) === id)) {
-      toast('Already in today\'s plan');
+      toast('Already in your plan', { icon: '⚠️' });
       return false;
     }
     if (plan.length >= MAX_PLAN) {
@@ -54,7 +54,7 @@ export function PlanProvider({ children }) {
   function saveForLater(workoutOrId) {
     const id = Number(typeof workoutOrId === 'object' ? workoutOrId.id : workoutOrId);
     if (saved.includes(id)) {
-      toast('Already saved for later');
+      toast('Already saved for later', { icon: '⚠️' });
       return false;
     }
     setSaved((current) => [...current, id]);

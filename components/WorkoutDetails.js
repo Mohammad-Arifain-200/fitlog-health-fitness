@@ -72,8 +72,7 @@ export default function WorkoutDetails({ workout }) {
             <button
               type="button"
               onClick={() => addToPlan(workout)}
-              disabled={inPlan || planFull}
-              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-[3px] bg-fit-accent px-5 text-[11px] font-extrabold uppercase tracking-[0.07em] text-[#11140d] transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-45"
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-[3px] bg-fit-accent px-5 text-[11px] font-extrabold uppercase tracking-[0.07em] text-[#11140d] transition hover:brightness-110"
             >
               <CalendarPlus className="h-4 w-4" />
               {inPlan ? 'In today\'s plan' : planFull ? 'Plan full' : 'Add to today\'s plan'}
@@ -81,8 +80,7 @@ export default function WorkoutDetails({ workout }) {
             <button
               type="button"
               onClick={() => saveForLater(workout)}
-              disabled={isSaved}
-              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-[3px] border border-[#3a404c] bg-[#12141a] px-5 text-[11px] font-extrabold uppercase tracking-[0.07em] text-white transition hover:border-[#656d7a] disabled:cursor-not-allowed disabled:opacity-45"
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-[3px] border border-[#3a404c] bg-[#12141a] px-5 text-[11px] font-extrabold uppercase tracking-[0.07em] text-white transition hover:border-[#656d7a]"
             >
               <Bookmark className="h-4 w-4" />
               {isSaved ? 'Saved' : 'Save for later'}
