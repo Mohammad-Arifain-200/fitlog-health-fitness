@@ -8,7 +8,7 @@ import LoadingSpinner from '@/components/LoadingSpinner';
 import EmptyState from '@/components/EmptyState';
 import PlanWorkoutCard from '@/components/PlanWorkoutCard';
 
-const API_URL = 'https://api.abcz.workers.dev/api/fitlog';
+const API_URL = '/api/workouts';
 
 export default function MyPlanClient() {
   const router = useRouter();

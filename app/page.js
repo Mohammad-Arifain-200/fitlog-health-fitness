@@ -5,7 +5,7 @@ import Hero from '@/components/Hero';
 import LoadingSpinner from '@/components/LoadingSpinner';
 import WorkoutCard from '@/components/WorkoutCard';
 
-const API_URL = 'https://api.abcz.workers.dev/api/fitlog';
+const API_URL = '/api/workouts';
 
 export default function HomePage() {
   const [workouts, setWorkouts] = useState([]);

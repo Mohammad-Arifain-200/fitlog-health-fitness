@@ -1,13 +1,7 @@
-'use client';
-
 import Image from 'next/image';
 import { Dumbbell } from 'lucide-react';
 
 export default function Hero() {
-  function scrollToLibrary() {
-    document.getElementById('library')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-
   return (
     <section className="overflow-hidden rounded-[4px] bg-fit-panel">
       <div className="grid min-h-[448px] items-center gap-8 px-7 py-12 sm:px-12 lg:grid-cols-[1.15fr_.85fr] lg:px-14 lg:py-0">
@@ -19,14 +13,13 @@ export default function Hero() {
           <p className="mt-6 max-w-[540px] text-sm leading-6 text-[#939aa7]">
             FitLog is a dark, no-nonsense gym companion: pick a lift, lock it into today&apos;s plan, and watch the week&apos;s work add up.
           </p>
-          <button
-            type="button"
-            onClick={scrollToLibrary}
+          <a
+            href="#library"
             className="mt-7 inline-flex items-center gap-2 rounded-[3px] bg-fit-accent px-5 py-3 text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#11140d] transition hover:brightness-110"
           >
             <Dumbbell className="h-4 w-4" />
             Browse workouts
-          </button>
+          </a>
         </div>
 
         <div className="relative flex min-h-[300px] items-center justify-center lg:min-h-[448px] lg:justify-end">
