@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --fit-bg: #0c0d10;
+  --fit-panel: #15171d;
+  --fit-accent: #c2f800;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--fit-bg);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--fit-bg);
+  font-family: Inter, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+a,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+select:focus-visible,
+[role='link']:focus-visible {
+  outline: 2px solid var(--fit-accent);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--fit-accent);
+  color: #11140d;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0c0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2b3039;
+  border-radius: 99px;
+}
+
+@media (max-width: 520px) {
+  header nav a {
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
+  }
+}
